@@ -35,9 +35,10 @@ def run_full_test(vocab_size: int = 32000, num_attacks: int = 100_000):
     print(f"Result: {'SUCCESS — Fingerprint survives (KL < 0.01)' if mean_kl < 0.01 else 'FAIL'}")
     print("\nThe anchor is statistically detectable and survives fine-tuning/clone attacks.")
 
-    # Statistical significance test
-    stat, p_value = wilcoxon(kls, alternative='less')
-    print(f"\nWilcoxon signed-rank test: p = {p_value:.2e}  (<< 0.05 → statistically significant)")
+    # Proper one-sample test: is mean KL significantly < 0.01?
+    stat, p_value = wilcoxon(np.array(kls) - 0.01, alternative='less')
+    print(f"\nWilcoxon signed-rank test (vs 0.01 threshold): p = {p_value:.2e}")
+    print(f"Result: {'HIGHLY SIGNIFICANT (p << 0.05)' if p_value < 0.05 else 'Not significant'}")
     print(f"95% bootstrap CI for mean KL: [{np.percentile(kls, 2.5):.5f}, {np.percentile(kls, 97.5):.5f}]")
 
 
