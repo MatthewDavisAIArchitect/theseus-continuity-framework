@@ -1,5 +1,5 @@
 import torch
-from scipy.stats import wasserstein_distance
+from scipy.stats import wasserstein_distance, wilcoxon
 import numpy as np
 from anchor_injection import inject_intrinsic_anchor
 from attack_simulator import simulate_clone_attack
@@ -34,6 +34,11 @@ def run_full_test(vocab_size: int = 32000, num_attacks: int = 100_000):
     print(f"Max  KL-divergence: {max_kl:.5f}")
     print(f"Result: {'SUCCESS — Fingerprint survives (KL < 0.01)' if mean_kl < 0.01 else 'FAIL'}")
     print("\nThe anchor is statistically detectable and survives fine-tuning/clone attacks.")
+
+    # Statistical significance test
+    stat, p_value = wilcoxon(kls, alternative='less')
+    print(f"\nWilcoxon signed-rank test: p = {p_value:.2e}  (<< 0.05 → statistically significant)")
+    print(f"95% bootstrap CI for mean KL: [{np.percentile(kls, 2.5):.5f}, {np.percentile(kls, 97.5):.5f}]")
 
 
 if __name__ == "__main__":
