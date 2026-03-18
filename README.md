@@ -1,6 +1,6 @@
 # theseus-continuity-framework
 
-**v1.0 — arXiv-ready release**
+**v4.0 — arXiv-ready release**
 
 **Paper:** Intent-Aware Continuity in Evolving AI Systems: Typed Adjudication for Provenance-Aware Continuity Judgments
 
@@ -24,7 +24,7 @@ bash run_harness.sh          # fingerprint anchor verification
 python ../run_all.py         # full Stage-I + figures
 ```
 
-## What's New in v1.0 (arXiv-ready)
+## What's New in v4.0 (arXiv-ready)
 
 * New canonical title and abstract (claims now exactly match evidence)
 * Typed continuity judgment (J_{k,c}) with operational decision procedure + continuity card JSON schema
@@ -57,7 +57,7 @@ python ../run_all.py         # full Stage-I + figures
 }
 ```
 
-Zenodo DOI: pending mint from v1.0 tag
+Zenodo DOI: pending mint from v4.0 tag
 arXiv: will be linked after upload
 
 ## License

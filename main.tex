@@ -51,7 +51,7 @@ The contribution of the paper is therefore not a complete production system, but
 \noindent\textbf{MSC:} 68T01 (Primary), 68T42, 91D30 (Secondary)
 
 \noindent\textbf{Data and Code Availability:} All code, including the full HonestAGI-style intrinsic fingerprinting test harness (with statistical tests), is available at the repository \\
-\url{https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework/tree/v1.0}.
+\url{https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework/tree/v4.0}.
 
 \section{Introduction}
 The Ship of Theseus asks whether an artifact that gradually replaces its parts remains the same artifact over time~\cite{wiggins2001}. For contemporary artificial intelligence systems, this is no longer merely a philosophical puzzle. Foundation models, agentic workflows, and deployed AI services are routinely altered by retraining, fine-tuning, policy revision, memory editing, tool substitution, infrastructure migration, and changes in intended use~\cite{bommasani2021}. In practice, enterprise organizations and compliance bodies must decide whether a later system state inherits the earlier system's safety certification, release authority, monitoring obligations, and legal liability posture, or whether it should be treated as an entirely new entity.
@@ -143,7 +143,7 @@ H(p_t) = -\sum_{i=1}^{V} p_t(i) \log p_t(i) + \lambda \cdot \phi(\mathbf{x}),
 where \(\phi(\mathbf{x}) = \sin(2\pi \cdot \mathbf{x})\) is a deterministic sinusoidal seed pattern and \(\lambda = 0.01\).
 
 The anchor enforces \(H(p_t) \approx \text{const}\) with mean KL-divergence < 0.01 (Wilcoxon signed-rank \(p < 10^{-6}\), 95\% bootstrap CI) under \(10^5\) pattern-mapping attacks. The full injection code, simulator, and one-click test harness (including statistical verification) are available at \\
-\url{https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework/tree/v1.0/fingerprint-anchor}.
+\url{https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework/tree/v4.0/fingerprint-anchor}.
 
 This invariant approach complements (but is orthogonal to) generation-time watermarking schemes such as Kirchenbauer et al.\ (2023) (red-green token biasing) and Christ et al.\ (2024) (undetectable semantic watermarks). Our method embeds a conserved quantity directly into the model’s output distribution during post-training, surviving weight-level merges rather than relying on token-level artifacts. Our output-distribution approach is complementary to the parameter-std signatures of Yoon et al.
 
@@ -384,7 +384,7 @@ The figures in this appendix visualize the geometry of configuration stability, 
 [Original figure environments unchanged -- TikZ plot for Fig 1, \includegraphics for Figs 2--6 with updated captions if needed; all remain as in original document.]
 
 \section{Reproducibility Scope and Package Status}
-The complete HonestAGI-style intrinsic fingerprinting test harness (including `anchor_injection.py`, `synthetic_test_harness.py`, and one-click verification with Wilcoxon and bootstrap tests) is available in the \texttt{fingerprint-anchor/} directory of the repository at \url{https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework/tree/v1.0}.
+The complete HonestAGI-style intrinsic fingerprinting test harness (including `anchor_injection.py`, `synthetic_test_harness.py`, and one-click verification with Wilcoxon and bootstrap tests) is available in the \texttt{fingerprint-anchor/} directory of the repository at \url{https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework/tree/v4.0}.
 
 The simulation source code and generated data for Stage-I experiments are available at the same repository.
 
