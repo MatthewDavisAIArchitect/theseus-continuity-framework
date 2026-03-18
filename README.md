@@ -24,16 +24,20 @@ bash run_harness.sh          # fingerprint anchor verification
 python ../run_all.py         # full Stage-I + figures
 ```
 
-## What's New in v4.0 (arXiv-ready)
+**Zenodo DOI:** https://doi.org/10.5281/zenodo.19080605
 
-* New canonical title and abstract (claims now exactly match evidence)
-* Typed continuity judgment (J_{k,c}) with operational decision procedure + continuity card JSON schema
-* Minimal Stage-II case suite table (authorized fine-tune, unauthorized clone, merge, reassembly, etc.)
-* Neutral positioning table vs. registries, provenance standards, watermarking, and fingerprinting
-* Theorem 1 proof + consequences for measurement layer
-* Threats-to-validity and strengthened Limitations sections
-* Full alignment with NIST AI RMF / EU AI Act
-* Zenodo DOI will be minted from this tag
+**What's new in v4.0 (arXiv-ready release)**
+
+- New canonical title and abstract (claims now exactly match evidence)
+- Typed continuity judgment \(J_{k,c}\) with operational decision procedure + continuity card JSON schema
+- Minimal Stage-II case suite table (authorized fine-tune, unauthorized clone, merge, reassembly, etc.)
+- Neutral positioning table vs. registries, provenance standards, watermarking, and fingerprinting
+- Theorem 1 proof + consequences for measurement layer
+- Threats-to-validity and strengthened Limitations sections
+- Full alignment with NIST AI RMF / EU AI Act
+- Complete reproducibility package (code, test harness, figures)
+
+Full paper source (`main.tex`), figures, and fingerprinting harness are available in the linked GitHub repository **(v4.0 tag)**. This is version 4.0 of the preprint series.
 
 ## Repository Structure
 
@@ -49,16 +53,17 @@ python ../run_all.py         # full Stage-I + figures
 
 ```bibtex
 @misc{davis2026intent,
-  title={Intent-Aware Continuity in Evolving AI Systems: Typed Adjudication for Provenance-Aware Continuity Judgments},
-  author={Matthew A. Davis},
-  year={2026},
-  howpublished={\url{https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework}},
-  note={arXiv forthcoming}
+  author = {Davis, Matthew A.},
+  title = {Intent-Aware Continuity in Evolving AI Systems: Typed Adjudication for Provenance-Aware Continuity Judgments},
+  year = {2026},
+  month = {March},
+  version = {4.0},
+  note = {arXiv forthcoming},
+  doi = {10.5281/zenodo.19080605},
+  url = {https://doi.org/10.5281/zenodo.19080605},
+  howpublished = {GitHub: https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework/tree/v4.0}
 }
 ```
-
-Zenodo DOI: pending mint from v4.0 tag
-arXiv: will be linked after upload
 
 ## License
 
