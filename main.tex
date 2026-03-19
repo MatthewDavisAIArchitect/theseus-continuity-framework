@@ -56,7 +56,7 @@ The contribution of the paper is therefore not a complete production system, but
 \noindent\textbf{Zenodo DOI:} \url{https://doi.org/10.5281/zenodo.19080605} (v4.0)
 
 \section{Introduction}
-The Ship of Theseus asks whether an artifact that gradually replaces its parts remains the same artifact over time~\cite{wiggins2001}. For contemporary artificial intelligence systems, this is no longer merely a philosophical puzzle. Foundation models, agentic workflows, and deployed AI services are routinely altered by retraining, fine-tuning, policy revision, memory editing, tool substitution, infrastructure migration, and changes in intended use~\cite{bommasani2021}. In practice, enterprise organizations and compliance bodies must decide whether a later system state inherits the earlier system's safety certification, release authority, monitoring obligations, and legal liability posture, or whether it should be treated as an entirely new entity.
+The classic Ship of Theseus paradox asks whether a ship whose planks are gradually replaced remains the same vessel~\cite{wiggins2001}. For contemporary artificial intelligence systems this question is no longer merely philosophical. Foundation models, agentic workflows, and deployed AI services are routinely altered by retraining, fine-tuning, policy revision, memory editing, tool substitution, infrastructure migration, and changes in intended use~\cite{bommasani2021}. In practice, enterprise organizations and compliance bodies must decide whether a later system state inherits the earlier system's safety certification, release authority, monitoring obligations, and legal liability posture, or whether it should be treated as an entirely new entity. Every such update replaces core components while the system continues to operate under the same name, safety certification, and liability posture. When does the evolving artifact cease to be the original governed entity and become something new? This operational version of the paradox appears in every enterprise release process, compliance review, and autonomous-agent governance decision. The present framework resolves it by treating continuity as a typed, provenance-aware adjudication rather than a scalar similarity score.
 
 A purely component-counting answer is grossly inadequate for these high-stakes cases~\cite{sculley2015,paleyes2022}. An updated system may remain geometrically close to its predecessor in weight space or behavioral output while simultaneously losing verified cryptographic lineage or deployment authorization. A fork, clone, merge, or reassembly may preserve some forms of continuity while decisively breaking others. These are operational Theseus-style persistence disputes because material, structural, functional, historical, and governance continuity can easily come apart.
 
@@ -381,7 +381,67 @@ The normative dimension \(n\) and hard invariants align naturally with NIST AI R
 
 \appendix
 \section{Appendix: Figures for the Measurement Layer and Adjudication Handoff}
-The figures in this appendix visualize the geometry of configuration stability, instability, recovery, and authorized rebaselining. They should be read as measurement-layer evidence and as illustrations of when difficult cases must be handed off to the typed continuity rule of Section 5. Threshold crossing, recovery, or baseline shift in a figure therefore marks an operational signal, not an automatic final identity verdict.
+
+The figures in this appendix visualize the geometry of configuration stability, instability, recovery, and authorized rebaselining. They should be read as measurement-layer evidence feeding the typed continuity judgment.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=0.95\textwidth,
+            height=0.65\textwidth,
+            title={Seed-Relative Monitoring Signal Over Time},
+            xlabel={Time},
+            ylabel={Observable Distance},
+            xmin=0, xmax=100,
+            ymin=0, ymax=1.6,
+            grid=major,
+            legend pos=north west,
+        ]
+        \addplot[thick, black] coordinates {(0,0.3) (5,0.8) (10,0.6) (15,1.1) (20,0.9) (25,1.3) (30,0.7) (35,0.4) (40,0.5) (45,0.2) (50,0.3) (55,0.8) (60,1.0) (65,0.6) (70,1.2) (75,1.4) (80,0.9) (85,1.5) (90,1.3) (95,0.7) (100,0.85)};
+        \addlegendentry{Monitoring Signal}
+        \addplot[thick, red, dashed] coordinates {(0,1.2) (100,1.2)};
+        \addlegendentry{Stability Threshold}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Seed-relative monitoring signal over time.}
+    \label{fig:1}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{fig2.pdf}
+    \caption{Configuration drift trajectories under random and repair operators (Stage-I simulation results).}
+    \label{fig:2}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{fig3.pdf}
+    \caption{Stability region membership over time with authorized amendments.}
+    \label{fig:3}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{fig4.pdf}
+    \caption{Local vs. seed-relative drift increments (repair dynamics).}
+    \label{fig:4}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{fig5.pdf}
+    \caption{Phase-space visualization of the Observable Configuration State Space.}
+    \label{fig:5}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{fig6.pdf}
+    \caption{Adjudication handoff examples showing provenance failure cases.}
+    \label{fig:6}
+\end{figure}
 
 \section{Reproducibility Scope and Package Status}
 The complete HonestAGI-style intrinsic fingerprinting test harness (including \texttt{anchor\_injection.py}, \texttt{synthetic\_test\_harness.py}, and one-click verification with Wilcoxon and bootstrap tests) is available in the \texttt{fingerprint-anchor/} directory of the repository at \url{https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework/tree/v4.0}.
