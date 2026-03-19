@@ -1,6 +1,6 @@
 # theseus-continuity-framework
 
-**v4.0 — arXiv-ready release**
+**v4.1 — arXiv-ready release**
 
 **Paper:** Intent-Aware Continuity in Evolving AI Systems: Typed Adjudication for Provenance-Aware Continuity Judgments
 
@@ -26,18 +26,13 @@ python ../run_all.py         # full Stage-I + figures
 
 **Zenodo DOI:** https://doi.org/10.5281/zenodo.19080605
 
-**What's new in v4.0 (arXiv-ready release)**
+**What's new in v4.1**
 
-- New canonical title and abstract (claims now exactly match evidence)
-- Typed continuity judgment \(J_{k,c}\) with operational decision procedure + continuity card JSON schema
-- Minimal Stage-II case suite table (authorized fine-tune, unauthorized clone, merge, reassembly, etc.)
-- Neutral positioning table vs. registries, provenance standards, watermarking, and fingerprinting
-- Theorem 1 proof + consequences for measurement layer
-- Threats-to-validity and strengthened Limitations sections
-- Full alignment with NIST AI RMF / EU AI Act
-- Complete reproducibility package (code, test harness, figures)
+- Strengthened Ship of Theseus framing in the Introduction (now the central metaphor is fully developed)
+- Restored all 6 measurement-layer figures in the Appendix (no more placeholder note)
+- Minor cleanups for arXiv submission
 
-Full paper source (`main.tex`), figures, and fingerprinting harness are available in the linked GitHub repository **(v4.0 tag)**. This is version 4.0 of the preprint series.
+This is version 4.1 of the preprint series. GitHub tag: v4.1
 
 ## Repository Structure
 
@@ -57,11 +52,11 @@ Full paper source (`main.tex`), figures, and fingerprinting harness are availabl
   title = {Intent-Aware Continuity in Evolving AI Systems: Typed Adjudication for Provenance-Aware Continuity Judgments},
   year = {2026},
   month = {March},
-  version = {4.0},
+  version = {4.1},
   note = {arXiv forthcoming},
   doi = {10.5281/zenodo.19080605},
   url = {https://doi.org/10.5281/zenodo.19080605},
-  howpublished = {GitHub: https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework/tree/v4.0}
+  howpublished = {GitHub: https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework/tree/v4.1}
 }
 ```
 
