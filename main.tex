@@ -51,9 +51,9 @@ The contribution of the paper is therefore not a complete production system, but
 \noindent\textbf{MSC:} 68T01 (Primary), 68T42, 91D30 (Secondary)
 
 \noindent\textbf{Data and Code Availability:} All code, including the full HonestAGI-style intrinsic fingerprinting test harness (with statistical tests), is available at the repository \\
-\url{https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework/tree/v4.0}.
+\url{https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework/tree/v4.1}.
 
-\noindent\textbf{Zenodo DOI:} \url{https://doi.org/10.5281/zenodo.19080605} (v4.0)
+\noindent\textbf{Zenodo DOI:} \url{https://doi.org/10.5281/zenodo.19104645} (v4.1)
 
 \section{Introduction}
 The classic Ship of Theseus paradox asks whether a ship whose planks are gradually replaced remains the same vessel~\cite{wiggins2001}. For contemporary artificial intelligence systems this question is no longer merely philosophical. Foundation models, agentic workflows, and deployed AI services are routinely altered by retraining, fine-tuning, policy revision, memory editing, tool substitution, infrastructure migration, and changes in intended use~\cite{bommasani2021}. In practice, enterprise organizations and compliance bodies must decide whether a later system state inherits the earlier system's safety certification, release authority, monitoring obligations, and legal liability posture, or whether it should be treated as an entirely new entity. Every such update replaces core components while the system continues to operate under the same name, safety certification, and liability posture. When does the evolving artifact cease to be the original governed entity and become something new? This operational version of the paradox appears in every enterprise release process, compliance review, and autonomous-agent governance decision. The present framework resolves it by treating continuity as a typed, provenance-aware adjudication rather than a scalar similarity score.
@@ -145,7 +145,7 @@ H(p_t) = -\sum_{i=1}^{V} p_t(i) \log p_t(i) + \lambda \cdot \phi(\mathbf{x}),
 where \(\phi(\mathbf{x}) = \sin(2\pi \cdot \mathbf{x})\) is a deterministic sinusoidal seed pattern and \(\lambda = 0.01\).
 
 The anchor enforces \(H(p_t) \approx \text{const}\) with mean KL-divergence < 0.01 (Wilcoxon signed-rank \(p < 10^{-6}\), 95\% bootstrap CI) under \(10^5\) pattern-mapping attacks. The full injection code, simulator, and one-click test harness (including statistical verification) are available at \\
-\url{https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework/tree/v4.0/fingerprint-anchor}.
+\url{https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework/tree/v4.1/fingerprint-anchor}.
 
 This invariant approach complements (but is orthogonal to) generation-time watermarking schemes such as Kirchenbauer et al.\ (2023) (red-green token biasing) and Christ et al.\ (2024) (undetectable semantic watermarks). Our method embeds a conserved quantity directly into the model’s output distribution during post-training, surviving weight-level merges rather than relying on token-level artifacts. Our output-distribution approach is complementary to the parameter-std signatures of Yoon et al.
 
@@ -444,7 +444,7 @@ The figures in this appendix visualize the geometry of configuration stability, 
 \end{figure}
 
 \section{Reproducibility Scope and Package Status}
-The complete HonestAGI-style intrinsic fingerprinting test harness (including \texttt{anchor\_injection.py}, \texttt{synthetic\_test\_harness.py}, and one-click verification with Wilcoxon and bootstrap tests) is available in the \texttt{fingerprint-anchor/} directory of the repository at \url{https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework/tree/v4.0}.
+The complete HonestAGI-style intrinsic fingerprinting test harness (including \texttt{anchor\_injection.py}, \texttt{synthetic\_test\_harness.py}, and one-click verification with Wilcoxon and bootstrap tests) is available in the \texttt{fingerprint-anchor/} directory of the repository at \url{https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework/tree/v4.1}.
 
 The simulation source code and generated data for Stage-I experiments are available at the same repository.
 

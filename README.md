@@ -7,11 +7,12 @@
 **Author:** Matthew A. Davis (March 2026)
 
 Reproducibility package containing:
-- Complete LaTeX source (`main.tex`)
-- Observable Configuration State Space simulations
-- HonestAGI-style intrinsic fingerprinting test harness (KL < 0.01 under 10⁵ attacks)
-- All manuscript figures (TikZ + PDF)
-- One-click verification scripts
+
+* Complete LaTeX source (`main.tex`)
+* Observable Configuration State Space simulations
+* HonestAGI-style intrinsic fingerprinting test harness (KL < 0.01 under 10⁵ attacks)
+* All manuscript figures (TikZ + PDF)
+* One-click verification scripts
 
 ## Quick Start (60 seconds)
 
@@ -20,17 +21,17 @@ git clone https://github.com/MatthewDavisAIArchitect/theseus-continuity-framewor
 cd theseus-continuity-framework
 cd fingerprint-anchor
 pip install -r requirements.txt
-bash run_harness.sh          # fingerprint anchor verification
-python ../run_all.py         # full Stage-I + figures
+bash run\_harness.sh          # fingerprint anchor verification
+python ../run\_all.py         # full Stage-I + figures
 ```
 
-**Zenodo DOI:** https://doi.org/10.5281/zenodo.19080605
+**Zenodo DOI:** https://doi.org/10.5281/zenodo.19104645
 
 **What's new in v4.1**
 
-- Strengthened Ship of Theseus framing in the Introduction (now the central metaphor is fully developed)
-- Restored all 6 measurement-layer figures in the Appendix (no more placeholder note)
-- Minor cleanups for arXiv submission
+* Strengthened Ship of Theseus framing in the Introduction (now the central metaphor is fully developed)
+* Restored all 6 measurement-layer figures in the Appendix (no more placeholder note)
+* Minor cleanups for arXiv submission
 
 This is version 4.1 of the preprint series. GitHub tag: v4.1
 
@@ -38,11 +39,11 @@ This is version 4.1 of the preprint series. GitHub tag: v4.1
 
 * `main.tex` — arXiv-ready paper source
 * `fingerprint-anchor/` — anchor injection + 10⁵-attack harness
-* `simulation/` — Stage-I drift & repair experiments
+* `simulation/` — Stage-I drift \& repair experiments
 * `figures/` — all 6 manuscript figures
 * `results/` — generated outputs
 * `notebooks/` — exploratory demos
-* `run_all.py` — one-command reproduction
+* `run\_all.py` — one-command reproduction
 
 ## Citation
 
@@ -54,8 +55,8 @@ This is version 4.1 of the preprint series. GitHub tag: v4.1
   month = {March},
   version = {4.1},
   note = {arXiv forthcoming},
-  doi = {10.5281/zenodo.19080605},
-  url = {https://doi.org/10.5281/zenodo.19080605},
+  doi = {10.5281/zenodo.19104645},
+  url = {https://doi.org/10.5281/zenodo.19104645},
   howpublished = {GitHub: https://github.com/MatthewDavisAIArchitect/theseus-continuity-framework/tree/v4.1}
 }
 ```
@@ -63,3 +64,4 @@ This is version 4.1 of the preprint series. GitHub tag: v4.1
 ## License
 
 MIT (see LICENSE)
+
